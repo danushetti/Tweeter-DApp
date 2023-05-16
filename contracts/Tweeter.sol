@@ -103,14 +103,13 @@ contract Tweeter {
         for(uint i=0; i<count; i++){
             result[i] = temp[i];
          }
-
          return result;
     }
 
 
     function deleteTweet(uint256 _id) external  {
         require(tweets[_id].tweeter == msg.sender,"only the tweeter can delete the tweet");
-        tweets[_id].isDeleted= false;
+        tweets[_id].isDeleted= true;
         emit tweetDeleted(tweets[_id].tweetText, tweets[_id].tweetImg);
     }
 

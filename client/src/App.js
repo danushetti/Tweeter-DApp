@@ -131,7 +131,7 @@ const App = () => {
       const signer = provider.getSigner();
       const signerAddress = await signer.getAddress();
       const contract = new ethers.Contract(
-        "0x4eA233E20CE783D9ce3EaEDA0d6F7c5A90CE3f20",
+        "0x33f54C766E8cf0945ab0cc6d1F14B54b12Ed3b14",
         abi.abi,
         signer
       );
