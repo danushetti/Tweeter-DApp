@@ -61,7 +61,7 @@
   justify-content: center;
   display: flex;
   padding: 10px 10px;
-  border-radius: 1000px;
+  border-radius: 100px;
 }
 
 .profileEdit:hover {

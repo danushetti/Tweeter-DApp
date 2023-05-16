@@ -228,7 +228,7 @@ const App = () => {
               <Routes>
                 <Route path="/" element={<Home contract={contract}/>} />
 
-                <Route path="/profile" element={<Profile  contract={contract}/>} />
+                <Route path="/profile" element={<Profile  contract={contract} provider={provider} />} />
 
                 <Route path="/settings" element={<Settings contract={contract}/>} />
               </Routes>

@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import './tweetinfeed.css';
-import { Avatar,Loading, useNotification } from '@web3uikit/core';
-import { MessageCircle ,Star, Matic, Bin, Calendar } from '@web3uikit/icons';
+import { Avatar,Loading} from '@web3uikit/core';
+import { MessageCircle, Matic, Bin, Calendar } from '@web3uikit/icons';
 
 // to interact with blockchain
 
