@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@web3uikit/core": "^1.0.4",
     "@web3uikit/icons": "^1.0.2",
+    "axios": "^1.4.0",
     "cartoon-avatar": "^1.0.2",
     "ethers": "5.7",
     "react": "^18.2.0",
@@ -15,6 +16,7 @@
     "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
+    "web3.storage": "^4.5.4",
     "web3modal": "^1.9.12"
   },
   "scripts": {

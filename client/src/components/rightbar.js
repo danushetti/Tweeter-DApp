@@ -34,14 +34,14 @@ const Rightbar = () => {
   return (
   <>
    <div className="rightbarContent">
-    <Input label='search Twitter' name='search twitter' prefixIcon={<search/>} labelBgColor="#141d26"></Input>
+    <Input label='search Twitter' name='search twitter' prefixIcon={<Search/>} labelBgColor="#141d26"></Input>
     <div className="trends">
         Trending
         {
             trends.map((e) => {
                 return (
                     <>
-                        <div className="trend" onClick={() => window.open(e.link)}>
+                        <div className="trend" onClick={() => window.open(e.link)} >
                             <img src={e.img} className="trendImg"></img>
                             <div className="trendText">{e.text}</div>
                         </div>

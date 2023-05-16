@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "./settings.css";
 import { Input, Upload } from "@web3uikit/core";
 
-const Settings = () => {
+const Settings = ({contract}) => {
   const [profileFile, setProfileFile] = useState();
   const [bannerFile, setBannerFile] = useState();
   const [name, setName] = useState();

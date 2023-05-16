@@ -1,12 +1,12 @@
 // SPDX-License-Identifier: UNLICENSED
 pragma solidity ^0.8.18;
 
-// Uncomment this line to use console.log
+// Uncomment this line to use console.logaca
 // import "hardhat/console.sol";
 
 contract Tweeter {
     address payable public owner;
-    uint256 private counter;
+    uint256 private counter=0;
 
     constructor() {
         owner = payable(msg.sender);
@@ -80,7 +80,7 @@ contract Tweeter {
         }
         
         tweet[] memory result = new tweet[](count);
-        for(uint i=0; i<= count; i++){
+        for(uint i=0; i< count; i++){
             result[i] = temp[i];
          }
 
@@ -100,7 +100,7 @@ contract Tweeter {
         }
         
         tweet[] memory result = new tweet[](count);
-        for(uint i=0; i<= count; i++){
+        for(uint i=0; i<count; i++){
             result[i] = temp[i];
          }
 

@@ -4,7 +4,10 @@ import "./profile.css";
 import { defaultImgs } from "../defaultimgs";
 import TweetInfeed from "../components/tweetInfeed";
 
-const Profile = () => {
+import {Matic} from "@web3uikit/icons";
+
+const Profile = ({contract}) => {
+
   return (
     <>
       <img className="profileBanner" src={defaultImgs[1]} />
@@ -23,7 +26,7 @@ const Profile = () => {
         </div>
       </div>
 
-      <TweetInfeed profile={true}></TweetInfeed>
+      <TweetInfeed profile={true} contract={contract}></TweetInfeed>
     </>
   );
 };

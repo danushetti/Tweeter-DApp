@@ -13,6 +13,7 @@ import Rightbar from "./components/rightbar";
 //components from web3uikit
 import { Button, useNotification, Loading } from "@web3uikit/core";
 import { Twitter, Metamask } from "@web3uikit/icons";
+import axios from "axios";
 
 //to interact with blockchain.
 import { ethers, utils } from "ethers";
@@ -24,6 +25,7 @@ var toonavatar = require("cartoon-avatar");
 const App = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [provider, setProvider] = useState(window.ethereum);
+  const [contract, setContract] = useState();
   const notification = useNotification();
   const [loading, setLoadingState] = useState(false);
   // const [signerAddress, setSignerAddress] = useState("");
@@ -129,11 +131,12 @@ const App = () => {
       const signer = provider.getSigner();
       const signerAddress = await signer.getAddress();
       const contract = new ethers.Contract(
-        "0x352f3f2BD83295eA2482A43b57B02685D5AeEFE5",
+        "0x4eA233E20CE783D9ce3EaEDA0d6F7c5A90CE3f20",
         abi.abi,
         signer
       );
-
+     
+      setContract(contract);
       const getUserDetail = await contract.getUser(signerAddress);
 
       if (getUserDetail['profileimg']) {
@@ -223,11 +226,11 @@ const App = () => {
             </div>
             <div className="mainWindow">
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Home contract={contract}/>} />
 
-                <Route path="/profile" element={<Profile />} />
+                <Route path="/profile" element={<Profile  contract={contract}/>} />
 
-                <Route path="/settings" element={<Settings />} />
+                <Route path="/settings" element={<Settings contract={contract}/>} />
               </Routes>
             </div>
             <div className="rightBar">
